@@ -39,7 +39,7 @@ def AppPattCount(pat, seq, d):
     seq = seq.upper()
     seq = list(seq)
     
-    for i in range (0, len(seq)-pat):
+    for i in range (0, len(seq)+1-pat):
         data_main = []
         Patterns = neighbours(seq[i:i+pat],d, data_main)
         for k in Patterns:
