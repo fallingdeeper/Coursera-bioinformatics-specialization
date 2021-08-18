@@ -41,7 +41,10 @@ def AppPattCount(pat, seq, d):
     
     for i in range (0, len(seq)+1-pat):
         data_main = []
-        Patterns = neighbours(seq[i:i+pat],d, data_main)
+        if d == 0:
+            Patterns = [seq[i:i+pat]]
+        else:
+            Patterns = neighbours(seq[i:i+pat],d, data_main)
         for k in Patterns:
             if k not in freqMap.keys():
                 freqMap[k]=1    
